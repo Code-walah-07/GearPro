@@ -1,14 +1,14 @@
-import './App.css'
-import Header_class from './components/Header_class'
-import Banner from './components/banner'
+import "./App.css";
+import Header_class from "./components/Header_class";
+import Banner from "./components/Banner";
 
 function App() {
-return (
-  <div>
-  <Header_class/>
-  <Banner/>
-  </div>
-)
+  return (
+    <div>
+      <Header_class />
+      <Banner />
+    </div>
+  );
 }
 
-export default App
+export default App;
