@@ -9,7 +9,7 @@ function Header_class() {
           <a class="h-10" href="">
             <img
               class="h-10 "
-              src="./src/assets/GearPro_Logo_main.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScS7SdDZdR55dvs-eZpvewIRhtsDyodmTj_Q&s"
               alt="GearPro_Logo"
             />
           </a>
