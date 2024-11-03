@@ -8,12 +8,12 @@ import {
 
 function Header_class() {
   return (
-    <header class=" p-1 h-18 flex flex-wrap">
-      <div class="bg-white h-16 flex text-wrap w-full  ">
+    <header class=" p-1 h-18 flex flex-wrap sticky top-0 ">
+      <div class="bg-white h-16 flex text-wrap w-full bg-orange-50 ">
         <div class=" w-18 mr-2 ">
-          <a class="h-16   " href="">
+          <a class="h-16  " href="">
             <img
-              class="h-10 w-14 mt-2"
+              class="h-10 w-14 mt-2 rounded-lg "
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScS7SdDZdR55dvs-eZpvewIRhtsDyodmTj_Q&s"
               alt="GearPro_Logo"
             />
@@ -27,16 +27,16 @@ function Header_class() {
           </div>
           <div class="w-5/6 >">
             <input
-              class=" w-5/6 h-10 mt-2 rounded-r-lg text-xs bg-slate-200"
+              class=" w-5/6 h-10 mt-2 rounded-r-lg text-xs bg-slate-200 hover:bg-slate-300"
               type="text"
               placeholder="   Enter for Search"
             />
           </div>
         </div>
         <div class=" h-10 w-3/6 mt-2 flex ">
-          <div class="h-10 w-2/6  flex flex-wrap ">
+          <div class="h-10 w-2/6  flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2 ">
             <a
-              class=" mt-1 ml flex-col w-2/6 hover:bg-blue-800 hover:text-white justify-center text-center"
+              class=" mt-1 ml flex-col w-2/6  hover:text-white justify-center text-center"
               href=""
             >
               <div class="text-xs pl-2 pr-2 ">
@@ -47,9 +47,9 @@ function Header_class() {
               </div>
             </a>
           </div>
-          <div class="h-10 w-2/6  flex flex-wrap">
+          <div class="h-10 w-2/6 ml-1 flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2">
             <a
-              class=" mt-1 ml flex-col w-2/6 hover:bg-blue-800 hover:text-white justify-center text-center"
+              class=" mt-1 ml flex-col w-2/6 justify-center text-center"
               href=""
             >
               <div class="text-xs pl-2 pr-2 ">
@@ -60,9 +60,9 @@ function Header_class() {
               </div>
             </a>
           </div>
-          <div class="h-10 w-2/6  flex flex-wrap">
+          <div class="h-10 w-2/6 ml-1 flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2">
           <a
-              class=" mt-1 ml flex-col w-2/6 hover:bg-blue-800 hover:text-white justify-center text-center"
+              class=" mt-1  flex-col w-2/6 justify-center text-center"
               href=""
             >
               <div class="text-xs pl-2 pr-2 ">

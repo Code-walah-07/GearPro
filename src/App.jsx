@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Header_class /><hr></hr>
-      {/* <Category_class/>
-      <Banner /> */}
+      <Category_class/>
+      <Banner />
     </div>
   );
 }
