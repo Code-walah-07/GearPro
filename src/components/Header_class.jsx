@@ -8,18 +8,18 @@ import {
 
 function Header_class() {
   return (
-    <header class=" p-1 h-18 flex flex-wrap sticky top-0 ">
-      <div class="bg-white h-16 flex text-wrap w-full bg-orange-50 ">
-        <div class=" w-18 mr-2 ">
-          <a class="h-16  " href="">
+    <header class=" pl-1 pr-1 pb-1 h-18 flex flex-wrap sticky top-0 ">
+      <div class="bg-white h-16 flex text-wrap w-full rounded-md shadow-lg ">
+        <div class=" w-20 ">
+          <a class="h-16 w-5/6 " href="">
             <img
-              class="h-10 w-14 mt-2 rounded-lg "
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScS7SdDZdR55dvs-eZpvewIRhtsDyodmTj_Q&s"
+              class="h-10 w-16 mt-2 rounded-lg "
+              src="src/assets/GearPro_Logo_main.png"
               alt="GearPro_Logo"
             />
           </a>
         </div>
-        <div class="flex text-wrap w-3/6 ">
+        <div class="flex text-wrap w-3/6 ml-2 ">
           <div class="w-1/6 h-10 bg-slate-200 rounded-l-lg mt-2">
             <div class="text-center p-2 w-5/6">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -27,17 +27,16 @@ function Header_class() {
           </div>
           <div class="w-5/6 >">
             <input
-              class=" w-5/6 h-10 mt-2 rounded-r-lg text-xs bg-slate-200 hover:bg-slate-300"
+              class=" w-5/6 h-10 mt-2 rounded-r-lg text-xs bg-slate-200 hover:bg-slate-300 "
               type="text"
               placeholder="   Enter for Search"
             />
           </div>
         </div>
         <div class=" h-10 w-3/6 mt-2 flex ">
-          <div class="h-10 w-2/6  flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2 ">
+          <div class="h-10 w-2/6 grid place-content-center rounded-lg hover:bg-blue-800 bg-blue-200 pl-5 hover:text-white shadow-md">
             <a
-              class=" mt-1 ml flex-col w-2/6  hover:text-white justify-center text-center"
-              href=""
+              class=" mt-1 ml w-2/6   grid place-content-center h-screen"
             >
               <div class="text-xs pl-2 pr-2 ">
                 <FontAwesomeIcon icon={faRightToBracket} />
@@ -47,25 +46,25 @@ function Header_class() {
               </div>
             </a>
           </div>
-          <div class="h-10 w-2/6 ml-1 flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2">
+          <div class="h-10 w-2/6 ml-1 grid place-content-center rounded-lg hover:bg-blue-800 bg-blue-200 hover:text-white pl-3 shadow-md">
             <a
-              class=" mt-1 ml flex-col w-2/6 justify-center text-center"
+              class=" mt-1 ml w-2/6 "
               href=""
             >
-              <div class="text-xs pl-2 pr-2 ">
+              <div class="text-xs pl-3">
                 <FontAwesomeIcon icon={faUser} />
               </div>
-              <div class="text-xs">
+              <div class="text-xs mr-3">
                 <b>Profile</b>
               </div>
             </a>
           </div>
-          <div class="h-10 w-2/6 ml-1 flex flex-wrap rounded-lg hover:bg-blue-800 bg-blue-200 pl-2">
+          <div class="h-10 w-2/6 ml-1 grid place-content-center rounded-lg hover:bg-blue-800 bg-blue-200 hover:text-white shadow-md">
           <a
-              class=" mt-1  flex-col w-2/6 justify-center text-center"
+              class=" mt-1 w-2/6"
               href=""
             >
-              <div class="text-xs pl-2 pr-2 ">
+              <div class="text-xs pl-1 pr-2 ">
                 <FontAwesomeIcon icon={faCartShopping} />
               </div>
               <div class="text-xs">

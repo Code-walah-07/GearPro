@@ -6,7 +6,7 @@ import Banner from "./components/Banner";
 function App() {
   return (
     <div>
-      <Header_class /><hr></hr>
+      <Header_class />
       <Category_class/>
       <Banner />
     </div>
