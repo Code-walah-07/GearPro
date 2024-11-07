@@ -14,7 +14,7 @@ function Header_class() {
           <a class="h-16 w-5/6 " href="">
             <img
               class="h-10 w-16 mt-2 rounded-lg "
-              src="./public/new_logo_2.svg"
+              src="/new_logo_2.svg"
               alt="GearPro_Logo"
             />
           </a>
