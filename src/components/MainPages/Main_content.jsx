@@ -1,4 +1,4 @@
-import Mainpage_products from "./Mainpage_products";
+import Mainpage_products from "../Mainpage_products";
 
 function Main_content(){
   return(
