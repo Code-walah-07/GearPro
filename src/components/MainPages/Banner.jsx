@@ -12,13 +12,13 @@ function Banner() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // // Auto-slide functionality
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 3000); // Change every 3 seconds
-  //   return () => clearInterval(interval); // Cleanup interval on component unmount
-  // }, [images.length]);
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change every 3 seconds
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
 
   // Navigate to the previous image
   const prevSlide = () => {

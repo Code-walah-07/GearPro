@@ -8,10 +8,12 @@ function App() {
   
   return (
     <div class="bg-slate-100">
-      <div><Header_class /></div>
+     <div className="sticky top-0"><Header_class /></div>
+     <div className="">
       <div><Category_class /></div>
-      <div><Banner /></div>
-      <div><Main_content /></div>
+      <div><Banner/></div>
+      <Main_content />
+      </div>
     </div>
   );
 }

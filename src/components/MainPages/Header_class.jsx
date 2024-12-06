@@ -27,7 +27,7 @@ function Header_class() {
           </div>
           <div class="w-5/6 >">
             <input
-              class=" w-5/6 h-10 mt-2 rounded-r-lg text-xs bg-slate-200 hover:bg-slate-300 border-none"
+              class=" w-5/6 h-10 mt-2 rounded-r-lg text-sm bg-slate-200 hover:bg-slate-300 border-none"
               type="text"
               placeholder="   Enter the Product you want."
             />
