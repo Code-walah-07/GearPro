@@ -9,54 +9,51 @@ import {
 
 function Category_class() {
   return (
-    <div class=" h-26 m-2  rounded-md w-5/5 flex-row p-3 ">
+    <div class=" h-26 m-2  rounded-md w-5/5 flex justify-center p-3 ">
       <nav class="flex h-24 rounded-lg">
-        <div class=" w-1/5 hover:bg- bg-orange-200 rounded-lg mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faPerson} />
+         {/* men category */}
+        <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col ">
+          <div class="flex justify-center">
+            <img className="h-28 rounded-lg" src="category_pic/men.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-xs">Men</b>
+            <b class="text-sm">Men</b>
           </div>
         </div>
-        <div class=" w-1/5 hover:bg-orange-300 bg-orange-200  rounded-md mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faPersonDress} />
+        {/* women category */}
+        <div class=" w-1/5 h-36 mr-5 rounded-md ml-5 justify-center text-center flex flex-col">
+        <div class="flex justify-center">
+            <img className="h-28 rounded-lg" src="category_pic/women.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-xs">Women</b>
+            <b class="text-sm">Women</b>
           </div>
         </div>
-        <div class=" w-1/5 hover:bg-orange-300 bg-orange-200 rounded-lg mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faShirt} />
+        {/* product category */}
+        <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col">
+        <div class="flex justify-center">
+            <img className="h-28 rounded-lg" src="category_pic/product.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-xs">Products</b>
+            <b class="text-sm">Product</b>
           </div>
         </div>
-        <div class=" w-1/5 hover:bg-orange-300 bg-orange-200 rounded-lg mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faCheck} />
+        {/* brands Category */}
+        <div class=" w-1/5 h-36 rounded-lg mr-5 ml-5 justify-center text-center flex flex-col">
+        <div class="flex justify-center">
+            <img className="h-28 rounded-lg" src="category_pic/brands.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-xs">Brands</b>
+            <b class="text-sm">Product</b>
           </div>
         </div>
-        <div class=" w-1/5 hover:bg-orange-300 bg-orange-200 rounded-lg mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faFutbol} />
+        {/* sports Category */}
+        <div class=" w-1/5 h-36 rounded-lg mr-5 ml-5 justify-center text-center  flex flex-col">
+        <div class="flex justify-center">
+            <img className="h-28 rounded-lg" src="category_pic/sports.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-xs">Sports</b>
-          </div>
-        </div>
-        <div class=" w-1/5 hover:bg-orange-300 bg-orange-200 rounded-lg mr-1.5 justify-center text-center shadow-lg">
-          <div class="text-3xl mt-4">
-            <FontAwesomeIcon icon={faFutbol} />
-          </div>
-          <div clas="">
-            <b class="text-xs">Sports</b>
+            <b class="text-sm">Sports</b>
           </div>
         </div>
     

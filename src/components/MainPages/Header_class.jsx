@@ -41,9 +41,10 @@ function Header_class() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-1"
-            >
+            ><div className="">
               <FontAwesomeIcon icon={faRightToBracket} className="text-xs" />
               <span className="text-xs font-bold">Login</span>
+              </div>
             </a>
           </div>
 
