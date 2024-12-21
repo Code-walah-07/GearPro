@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -8,64 +9,58 @@ import {
 
 function Header_class() {
   return (
-    <header class=" pl-1 pr-1 pb-1 h-18 flex flex-wrap sticky top-0">
-      <div class=" h-16 flex text-wrap w-full rounded-md shadow-lg bg-white">
-        <div class=" w-26">
-          <a class="h-16 w-5/6" href="">
+    <header className="pl-1 pr-1 pb-1 h-18 flex flex-wrap sticky top-0">
+      <div className="h-24 flex text-wrap w-full rounded-md shadow-lg bg-white">
+        <div className="w-26">
+          <Link to="/" className="h-16 w-5/6">
             <img
-              class="h-10 w-6/6 mt-2 rounded-lg hover:shadow-lg "
+              className="h-10 w-6/6 mt-7 rounded-lg hover:shadow-lg"
               src="/new_logo_2.svg"
               alt="GearPro_Logo"
             />
-          </a>
+          </Link>
         </div>
-        <div class="flex text-wrap w-3/6 ml-2  ">
-          <div class="w-1/6 h-10 bg-slate-200 rounded-l-lg mt-2 ">
-            <div class="text-center p-2 w-5/6">
+        <div className="flex text-wrap w-3/6 ml-2">
+          <div className="w-1/6 h-10 bg-slate-200 rounded-l-lg mt-7">
+            <div className="text-center p-2 w-5/6">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div>
           </div>
-          <div class="w-5/6 >">
-            <input
-              class=" w-5/6 h-10 mt-2 rounded-r-lg text-sm bg-slate-200 hover:bg-slate-300 border-none"
-              type="text"
-              placeholder="   Enter the Product you want."
-            />
-          </div>
+          <input
+            className="w-5/6 h-10 mt-7 rounded-r-lg text-sm bg-slate-200 hover:bg-slate-300 border-none"
+            type="text"
+            placeholder="   Enter the Product you want."
+          />
         </div>
-        <div class=" h-10 w-3/6 mt-2 flex ">
-          <div class="h-10 w-2/6 grid place-content-center rounded-lg hover:bg-slate-500  pl-5 hover:text-white shadow-md">
-            <a
-              class=" mt-1 ml w-2/6   grid
-            place-content-center h-screen"
+
+        <div className="h-10 w-3/6 mt-2 flex">
+          {/* Login Button */}
+          <div className="h-10 w-2/6 grid mt-5 place-content-center rounded-lg ml-2 hover:bg-slate-500 mr-2 hover:text-white shadow-md">
+          <a
+              href="/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1"
             >
-              <div class="text-xs pl-2 pr-2 ">
-                <FontAwesomeIcon icon={faRightToBracket} />
-              </div>
-              <div class="text-xs">
-                <b>Login</b>
-              </div>
+              <FontAwesomeIcon icon={faRightToBracket} className="text-xs" />
+              <span className="text-xs font-bold">Login</span>
             </a>
           </div>
-          <div class="h-10 w-2/6 ml-1 grid place-content-center rounded-lg hover:bg-slate-500 hover:text-white pl-3 shadow-md">
-            <a class=" mt-1 ml w-2/6 " href="">
-              <div class="text-xs pl-3">
-                <FontAwesomeIcon icon={faUser} />
-              </div>
-              <div class="text-xs mr-3">
-                <b>Profile</b>
-              </div>
-            </a>
+
+          {/* Profile Button */}
+          <div className="h-10 w-2/6 ml-1 mr-2 mt-5 grid place-content-center rounded-lg hover:bg-slate-500 hover:text-white pl-3 shadow-md">
+            <Link to="/profile" className="flex items-center space-x-1">
+              <FontAwesomeIcon icon={faUser} className="text-xs" />
+              <span className="text-xs font-bold">Profile</span>
+            </Link>
           </div>
-          <div class="h-10 w-2/6 ml-1 grid place-content-center rounded-lg hover:bg-slate-500  hover:text-white shadow-md">
-            <a class=" mt-1 w-2/6" href="">
-              <div class="text-xs pl-1 pr-2 ">
-                <FontAwesomeIcon icon={faCartShopping} />
-              </div>
-              <div class="text-xs">
-                <b>Cart</b>
-              </div>
-            </a>
+
+          {/* Cart Button */}
+          <div className="h-10 w-2/6 ml-1 mr-2 mt-5 grid place-content-center rounded-lg hover:bg-slate-500 hover:text-white shadow-md">
+            <Link to="/cart" className="flex items-center space-x-1">
+              <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
+              <span className="text-xs font-bold">Cart</span>
+            </Link>
           </div>
         </div>
       </div>

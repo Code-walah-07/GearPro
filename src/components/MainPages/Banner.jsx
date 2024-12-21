@@ -4,21 +4,20 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 function Banner() {
   const images = [
    "https://img.freepik.com/free-vector/sport-equipment-banner_1284-32611.jpg",
-    "https://img.freepik.com/free-vector/sale-landing-page-template-with-photo_23-2148271371.jpg",
+
     "https://www.tcscricket.com/wp-content/uploads/2021/03/new-balance-banner-3.jpg",
-    "https://www.iworkinsport.com/iwis-admin/uploads/2592101527738293.jpg",
 
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-slide functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change every 3 seconds
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [images.length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 3000); // Change every 3 seconds
+  //   return () => clearInterval(interval); // Cleanup interval on component unmount
+  // }, [images.length]);
 
   // Navigate to the previous image
   const prevSlide = () => {
