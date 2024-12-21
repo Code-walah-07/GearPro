@@ -10,7 +10,7 @@ function App() {
   return (
   <Router>
     <div className="bg-slate-100">
-      <div className="sticky top-0">
+      <div className="">
         <Header_class />
         <Routes>
           <Route path="/login" element={<Sign_up />} />
