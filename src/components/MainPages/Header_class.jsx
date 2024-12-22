@@ -10,7 +10,7 @@ import {
 function Header_class() {
   return (
     <header className="pl-1 pr-1 pb-1 h-18 flex flex-wrap sticky top-0">
-      <div className="h-24 flex text-wrap w-full rounded-md shadow-lg bg-white">
+      <div className="h-24 flex text-wrap w-full rounded-md  bg-white">
         <div className="w-26">
           <Link to="/" className="h-16 w-5/6">
             <img

@@ -32,7 +32,7 @@ function Banner() {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto mt-4 h-70">
+    <div className="relative w-full  mx-auto mt-4 h-70">
       <div className="overflow-hidden relative">
         <img
           src={images[currentIndex]}

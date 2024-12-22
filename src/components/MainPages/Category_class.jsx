@@ -9,8 +9,8 @@ import {
 
 function Category_class() {
   return (
-    <div class=" h-26 m-2  rounded-md w-5/5 flex justify-center p-3 ">
-      <nav class="flex h-24 rounded-lg">
+    <div class=" h-40 m-2 bg-slate-100 rounded-md w-5/5 flex justify-center p-3 ">
+      <nav class="flex h-24 rounded-lg w-full">
          {/* men category */}
         <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col ">
           <div class="flex justify-center">
@@ -44,7 +44,7 @@ function Category_class() {
             <img className="h-28 rounded-lg" src="category_pic/brands.png" alt="" />
           </div>
           <div clas="">
-            <b class="text-sm">Product</b>
+            <b class="text-sm">Brands</b>
           </div>
         </div>
         {/* sports Category */}

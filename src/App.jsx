@@ -9,9 +9,9 @@ import Sign_up from "./components/sub_pages/Sign_up";
 function App() {
   return (
   <Router>
-    <div className="bg-slate-100">
+    <div className="bg-slate-300 ">
       <div className="">
-        <Header_class />
+        <Header_class className="sticky-top-o"/>
         <Routes>
           <Route path="/login" element={<Sign_up />} />
         </Routes>
