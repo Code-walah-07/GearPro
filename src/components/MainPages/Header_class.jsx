@@ -5,59 +5,71 @@ import {
   faUser,
   faCartShopping,
   faRightToBracket,
-} from "@fortawesome/free-solid-svg-icons";
+} 
+from "@fortawesome/free-solid-svg-icons";
 
 function Header_class() {
   return (
-    <header className="pl-1 pr-1 pb-1 h-18 flex flex-wrap sticky top-0">
-      <div className="h-24 flex text-wrap w-full rounded-md  bg-white">
-        <div className="w-26">
+    <header className=" pb-1 h-18 flex flex-wrap">
+      <div className="h-20 flex text-wrap w-full bg-white">
+        {/* website logo */}
+        <div className="w-1/6 pl-5">
           <Link to="/" className="h-16 w-5/6">
             <img
-              className="h-10 w-6/6 mt-7 rounded-lg hover:shadow-lg"
+              className="h-10 w-6/6 mt-5 rounded-lg hover:shadow-lg"
               src="/new_logo_2.svg"
               alt="GearPro_Logo"
             />
           </Link>
         </div>
-        <div className="flex text-wrap w-3/6 ml-2">
-          <div className="w-1/6 h-10 bg-slate-200 rounded-l-lg mt-7">
-            <div className="text-center p-2 w-5/6">
+
+        {/* search bar */}
+        <div className="flex text-wrap w-2/6 pl-5">
+          <div className=" h-10 bg-slate-200 rounded-l-lg mt-5">
+            <div className="text-center p-2">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </div>
           </div>
           <input
-            className="w-5/6 h-10 mt-7 rounded-r-lg text-sm bg-slate-200 hover:bg-slate-300 border-none"
+            className="w-5/6 h-10 mt-5 rounded-r-lg text-sm bg-slate-200 hover:bg-slate-300 border-none"
             type="text"
+            text="   "
             placeholder="   Enter the Product you want."
           />
         </div>
 
+        {/* extra bars */}
         <div className="h-10 w-3/6 mt-2 flex">
           {/* Login Button */}
-          <div className="h-10 w-2/6 grid mt-5 place-content-center rounded-lg ml-2 hover:bg-slate-500 mr-2 hover:text-white shadow-md">
-          <a
-              href="/login"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
+            <Link
+              to="/Sign_up"
               className="flex items-center space-x-1"
-            ><div className="">
-              <FontAwesomeIcon icon={faRightToBracket} className="text-xs" />
-              <span className="text-xs font-bold">Login</span>
+            >
+              <div className="">
+                <FontAwesomeIcon icon={faRightToBracket} className="text-xs" />
+                <span className="text-xs font-bold">Login</span>
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Profile Button */}
-          <div className="h-10 w-2/6 ml-1 mr-2 mt-5 grid place-content-center rounded-lg hover:bg-slate-500 hover:text-white pl-3 shadow-md">
+          <div className="h-10 w-1/4  mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white pl-3 ">
             <Link to="/profile" className="flex items-center space-x-1">
               <FontAwesomeIcon icon={faUser} className="text-xs" />
-              <span className="text-xs font-bold">Profile</span>
+              <span className="text-xs font-bold pr-1">Profile</span>
             </Link>
           </div>
 
           {/* Cart Button */}
-          <div className="h-10 w-2/6 ml-1 mr-2 mt-5 grid place-content-center rounded-lg hover:bg-slate-500 hover:text-white shadow-md">
+          <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
+            <Link to="/cart" className="flex items-center space-x-1">
+              <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
+              <span className="text-xs font-bold">Cart</span>
+            </Link>
+          </div>
+          {/* Cart Button */}
+          <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
             <Link to="/cart" className="flex items-center space-x-1">
               <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
               <span className="text-xs font-bold">Cart</span>

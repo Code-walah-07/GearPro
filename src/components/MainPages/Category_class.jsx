@@ -9,7 +9,7 @@ import {
 
 function Category_class() {
   return (
-    <div class=" h-40 m-2 bg-slate-100 rounded-md w-5/5 flex justify-center p-3 ">
+    <div class=" h-40 m-2 mt-10 bg-slate-100 rounded-md w-5/5 flex justify-center p-3 ">
       <nav class="flex h-24 rounded-lg w-full">
          {/* men category */}
         <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col ">

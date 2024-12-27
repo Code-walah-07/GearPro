@@ -13,6 +13,10 @@ export default {
       brightOrange: '#FF8C00',
       coolGray: '#E6E6E6',
       darkNavy: '#1B1F3B',
+    },
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+      heading: ['Montserrat', 'sans-serif'],
     },},
   },
   plugins: [],

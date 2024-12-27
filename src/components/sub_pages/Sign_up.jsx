@@ -1,4 +1,74 @@
+
 function Sign_up() {
-  return <h1>Hello this login page</h1>;
+  return (
+    <div className="flex h-screen justify-center items-center  ">
+      <div className="w-96 h-4/5 rounded-2xl bg-slate-200">
+        <div className="flex justify-center mt-14 mb-8">
+          <h2 className="text-3xl font-heading">Login</h2>
+        </div>
+        <div className="text-2xl mt-3 flex items-center justify-center">
+          <h2>Welcome Back!</h2>
+        </div>
+        {/* company logo
+        <div className="w-96 h-12 flex justify-center ">
+          <img className="" src="/new_logo_2.svg" alt="" />
+        </div> */}
+        {/* Authentication */}
+        <div className="flex flex-col items-center ">
+          <input
+            className="mt-5 w-80 h-10 rounded-lg"
+            type="text"
+            required
+            placeholder="  Enter Your Username"
+          />
+          <input
+            className="mt-3 w-80 h-10 rounded-lg"
+            type="text"
+            required
+            placeholder="  Enter Your Password"
+          />
+        </div>
+        {/* Extra field */}
+        <div className="flex">
+          <div className="flex">
+            <input className="w-3 mt-2 ml-10" type="checkbox" name="" id="" />
+            <div className="mt-1 ml-1">
+              <span className="text-xs">Remember Me</span>
+            </div>
+          </div>
+          <div className="ml-24 mt-1">
+            <span>
+              <a className="text-xs text-blue-700" href="">
+                Forget your password?
+              </a>
+            </span>
+          </div>
+        </div>
+
+        {/* button */}
+        <div className="flex items-center justify-center mt-5">
+          <div className="flex items-center justify-center w-80 h-10 rounded-2xl bg-slate-500 hover:bg-black">
+            <button className="text-white">Login</button>
+          </div>
+        </div>
+
+       
+        <div className="mt-2">
+          <span className="ml-10 text-xs ">
+            ----------------------------------- or, login with
+            ----------------------------------
+          </span>
+        </div>
+        {/* other methods for login */}
+        <div>
+          <div>
+            <button>Google</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
 }
+
 export default Sign_up;

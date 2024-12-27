@@ -1,33 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Header_class from "./components/MainPages/Header_class";
-import Category_class from "./components/MainPages/Category_class";
-import Banner from "./components/MainPages/Banner";
-import Main_content from "./components/MainPages/Main_content";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+//import "./App.css";
+import Home_page from "./components/MainPages/Home_page";
 import Sign_up from "./components/sub_pages/Sign_up";
 
 function App() {
   return (
-  <Router>
-    <div className="bg-slate-300 ">
-      <div className="">
-        <Header_class className="sticky-top-o"/>
-        <Routes>
-          <Route path="/login" element={<Sign_up />} />
-        </Routes>
-      </div>
-      <div>
-        <Banner />
-      </div>
-      <div>
-        <Category_class />
-      </div>
-      
-      <div>
-        <Main_content />
-      </div>
-    </div>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home_page />} />
+        <Route path="/Home_page" element={<Home_page />} />
+        <Route path="/Sign_up" element={<Sign_up />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

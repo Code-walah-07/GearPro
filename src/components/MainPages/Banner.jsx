@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import banner1 from "/banner/banner1.jpg";
+import banner2 from "/banner/banner2.jpg";
+import banner3 from "/banner/banner3.jpg";
 
 function Banner() {
-  const images = [
-   "https://img.freepik.com/free-vector/sport-equipment-banner_1284-32611.jpg",
-
-    "https://www.tcscricket.com/wp-content/uploads/2021/03/new-balance-banner-3.jpg",
-
-  ];
+  const images = [banner1, banner2, banner3];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -32,8 +30,8 @@ function Banner() {
   };
 
   return (
-    <div className="relative w-full  mx-auto mt-4 h-70">
-      <div className="overflow-hidden relative">
+    <div className="relative w-full max-h-80 mx-auto ml-2">
+      <div className="overflow-hidden w-relative rounded-md max-h-80 mr-3">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
@@ -60,9 +58,7 @@ function Banner() {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full ${
-              index === currentIndex
-                ? "bg-blue-500"
-                : "bg-gray-400"
+              index === currentIndex ? "bg-blue-500" : "bg-gray-400"
             }`}
           ></button>
         ))}
