@@ -1,12 +1,15 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function Sign_up() {
   return (
     <div className="flex h-screen justify-center items-center  ">
-      <div className="w-96 h-4/5 rounded-2xl bg-slate-200">
-        <div className="flex justify-center mt-14 mb-8">
+      <div className="w-96 h-4/6 rounded-2xl bg-slate-200">
+        <div className="flex justify-center mt-8 mb-4">
           <h2 className="text-3xl font-heading">Login</h2>
         </div>
-        <div className="text-2xl mt-3 flex items-center justify-center">
+
+        <div className="text-2xl flex items-center justify-center">
           <h2>Welcome Back!</h2>
         </div>
         {/* company logo
@@ -16,14 +19,14 @@ function Sign_up() {
         {/* Authentication */}
         <div className="flex flex-col items-center ">
           <input
-            className="mt-5 w-80 h-10 rounded-lg"
+            className="mt-5 w-80 h-10 rounded-lg text-xs"
             type="text"
             required
             placeholder="  Enter Your Username"
           />
           <input
-            className="mt-3 w-80 h-10 rounded-lg"
-            type="text"
+            className="mt-3 w-80 h-10 rounded-lg text-xs"
+            type="password"
             required
             placeholder="  Enter Your Password"
           />
@@ -39,7 +42,7 @@ function Sign_up() {
           <div className="ml-24 mt-1">
             <span>
               <a className="text-xs text-blue-700" href="">
-                Forget your password?
+                Forgot your password?
               </a>
             </span>
           </div>
@@ -52,7 +55,6 @@ function Sign_up() {
           </div>
         </div>
 
-       
         <div className="mt-2">
           <span className="ml-10 text-xs ">
             ----------------------------------- or, login with
@@ -60,12 +62,32 @@ function Sign_up() {
           </span>
         </div>
         {/* other methods for login */}
-        <div>
-          <div>
-            <button>Google</button>
-          </div>
+        <div className="flex items-center justify-center mt-2">
+          <a href="">
+            <div className="hover:bg-white w-20 h-8 flex justify-center rounded-md">
+              <img className="w-6" src="google.svg" alt="" />
+              <button>Google</button>
+            </div>
+          </a>
+          <a href="">
+            <div className="hover:bg-white w-24 h-8 ml-5 flex justify-center rounded-md">
+              <img className="w-6" src="facebook.svg" alt="" />
+              <button>facebook</button>
+            </div>
+          </a>
         </div>
 
+        {/* Sign Up */}
+        <div>
+          <div className="flex items-center justify-center mt-3">
+            <span className="text-xs"> Not Registered yet?</span>
+            <a className="ml-1" href="">
+              <span className="text-xs text-blue-600">
+                <u>Register</u>
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
