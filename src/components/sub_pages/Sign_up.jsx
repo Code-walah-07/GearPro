@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
+  // Remember its a login page
 function Sign_up() {
   return (
     <div className="flex h-screen justify-center items-center  ">

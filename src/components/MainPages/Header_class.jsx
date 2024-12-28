@@ -68,13 +68,13 @@ function Header_class() {
               <span className="text-xs font-bold">Cart</span>
             </Link>
           </div>
-          {/* Cart Button */}
+          {/* Cart Button
           <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
             <Link to="/cart" className="flex items-center space-x-1">
               <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
               <span className="text-xs font-bold">Cart</span>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
