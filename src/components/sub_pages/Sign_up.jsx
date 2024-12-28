@@ -4,9 +4,12 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
   // Remember its a login page
 function Sign_up() {
   return (
-    <div className="flex h-screen justify-center items-center  ">
+    <div className="flex flex-col h-screen justify-center items-center  ">
+      <div className="mb-5">
+        <img className="h-20" src="new_logo_2.svg" alt="" />
+      </div>
       <div className="w-96 h-4/6 rounded-2xl bg-slate-200">
-        <div className="flex justify-center mt-8 mb-4">
+        <div className="flex justify-center mt-8 mb-4"> 
           <h2 className="text-3xl font-heading">Login</h2>
         </div>
 
@@ -20,13 +23,13 @@ function Sign_up() {
         {/* Authentication */}
         <div className="flex flex-col items-center ">
           <input
-            className="mt-5 w-80 h-10 rounded-lg text-xs"
+            className="mt-5 w-80 h-10 rounded-lg text-sm"
             type="text"
             required
             placeholder="  Enter Your Username"
           />
           <input
-            className="mt-3 w-80 h-10 rounded-lg text-xs"
+            className="mt-3 w-80 h-10 rounded-lg text-sm"
             type="password"
             required
             placeholder="  Enter Your Password"
