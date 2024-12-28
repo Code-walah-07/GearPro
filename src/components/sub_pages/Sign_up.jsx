@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
-  // Remember its a login page
+// Remember its a login page
 function Sign_up() {
   return (
     <div className="flex flex-col h-screen justify-center items-center  ">
@@ -9,17 +10,14 @@ function Sign_up() {
         <img className="h-20" src="new_logo_2.svg" alt="" />
       </div>
       <div className="w-96 h-4/6 rounded-2xl bg-slate-200">
-        <div className="flex justify-center mt-8 mb-4"> 
+        <div className="flex justify-center mt-8 mb-4">
           <h2 className="text-3xl font-heading">Login</h2>
         </div>
 
         <div className="text-2xl flex items-center justify-center">
           <h2>Welcome Back!</h2>
         </div>
-        {/* company logo
-        <div className="w-96 h-12 flex justify-center ">
-          <img className="" src="/new_logo_2.svg" alt="" />
-        </div> */}
+  h 
         {/* Authentication */}
         <div className="flex flex-col items-center ">
           <input
@@ -85,11 +83,11 @@ function Sign_up() {
         <div>
           <div className="flex items-center justify-center mt-3">
             <span className="text-xs"> Not Registered yet?</span>
-            <a className="ml-1" href="">
+            <Link className="ml-1" to="/Sign_in">
               <span className="text-xs text-blue-600">
                 <u>Register</u>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
