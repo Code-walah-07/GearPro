@@ -17,7 +17,7 @@ function Sign_up() {
         <div className="text-2xl flex items-center justify-center">
           <h2>Welcome Back!</h2>
         </div>
-  h 
+  
         {/* Authentication */}
         <div className="flex flex-col items-center ">
           <input

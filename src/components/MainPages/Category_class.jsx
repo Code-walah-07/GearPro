@@ -1,62 +1,73 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheck,
-  faFutbol,
-  faPerson,
-  faPersonDress,
-  faShirt,
-} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function Category_class() {
   return (
-    <div class=" h-40 m-2 mt-10 bg-slate-100 rounded-md w-5/5 flex justify-center p-3 ">
-      <nav class="flex h-24 rounded-lg w-full">
-         {/* men category */}
-        <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col ">
-          <div class="flex justify-center">
-            <img className="h-28 rounded-lg" src="category_pic/men.png" alt="" />
-          </div>
-          <div clas="">
-            <b class="text-sm">Men</b>
-          </div>
-        </div>
-        {/* women category */}
-        <div class=" w-1/5 h-36 mr-5 rounded-md ml-5 justify-center text-center flex flex-col">
-        <div class="flex justify-center">
-            <img className="h-28 rounded-lg" src="category_pic/women.png" alt="" />
-          </div>
-          <div clas="">
-            <b class="text-sm">Women</b>
-          </div>
-        </div>
-        {/* product category */}
-        <div class=" w-1/5 h-36 mr-5 rounded-lg ml-5 justify-center text-center flex flex-col">
-        <div class="flex justify-center">
-            <img className="h-28 rounded-lg" src="category_pic/product.png" alt="" />
-          </div>
-          <div clas="">
-            <b class="text-sm">Product</b>
-          </div>
-        </div>
-        {/* brands Category */}
-        <div class=" w-1/5 h-36 rounded-lg mr-5 ml-5 justify-center text-center flex flex-col">
-        <div class="flex justify-center">
-            <img className="h-28 rounded-lg" src="category_pic/brands.png" alt="" />
-          </div>
-          <div clas="">
-            <b class="text-sm">Brands</b>
-          </div>
-        </div>
-        {/* sports Category */}
-        <div class=" w-1/5 h-36 rounded-lg mr-5 ml-5 justify-center text-center  flex flex-col">
-        <div class="flex justify-center">
-            <img className="h-28 rounded-lg" src="category_pic/sports.png" alt="" />
-          </div>
-          <div clas="">
-            <b class="text-sm">Sports</b>
-          </div>
-        </div>
-    
+    <div className="h-auto m-2 mt-10 bg-slate-100 rounded-md p-3">
+      <nav className="flex flex-wrap justify-center gap-4">
+        {/* Men category */}
+        <Link
+          to="/men"
+          className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
+        >
+          <img
+            className="h-28 w-auto rounded-lg cursor-pointer"
+            src="category_pic/men.png"
+            alt="Men"
+          />
+          <b className="text-sm mt-2">Men</b>
+        </Link>
+
+        {/* Women category */}
+        <Link
+          to="/women"
+          className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
+        >
+          <img
+            className="h-28 w-auto rounded-lg cursor-pointer"
+            src="category_pic/women.png"
+            alt="Women"
+          />
+          <b className="text-sm mt-2">Women</b>
+        </Link>
+
+        {/* Product category */}
+        <Link
+          to="/product"
+          className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
+        >
+          <img
+            className="h-28 w-auto rounded-lg cursor-pointer"
+            src="category_pic/product.png"
+            alt="Product"
+          />
+          <b className="text-sm mt-2">Product</b>
+        </Link>
+
+        {/* Brands category */}
+        <Link
+          to="/brands"
+          className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
+        >
+          <img
+            className="h-28 w-auto rounded-lg cursor-pointer"
+            src="category_pic/brands.png"
+            alt="Brands"
+          />
+          <b className="text-sm mt-2">Brands</b>
+        </Link>
+
+        {/* Sports category */}
+        <Link
+          to="/sports"
+          className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
+        >
+          <img
+            className="h-28 w-auto rounded-lg cursor-pointer"
+            src="category_pic/sports.png"
+            alt="Sports"
+          />
+          <b className="text-sm mt-2">Sports</b>
+        </Link>
       </nav>
     </div>
   );

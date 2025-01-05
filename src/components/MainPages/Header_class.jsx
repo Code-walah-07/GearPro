@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
   faUser,
   faCartShopping,
   faRightToBracket,
-} 
-from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header_class() {
+  const location = useLocation();
+
   return (
     <header className=" pb-1 h-18 flex flex-wrap">
       <div className="h-20 flex text-wrap w-full bg-white">
@@ -42,10 +43,7 @@ function Header_class() {
         <div className="h-10 w-3/6 mt-2 flex">
           {/* Login Button */}
           <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
-            <Link
-              to="/Sign_up"
-              className="flex items-center space-x-1"
-            >
+            <Link to="/Sign_up" className="flex items-center space-x-1">
               <div className="">
                 <FontAwesomeIcon icon={faRightToBracket} className="text-xs" />
                 <span className="text-xs font-bold">Login</span>
@@ -63,19 +61,17 @@ function Header_class() {
 
           {/* Cart Button */}
           <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
-            <Link to="/cart" className="flex items-center space-x-1">
+            <Link to="/CartPage" className="flex items-center space-x-1">
               <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
               <span className="text-xs font-bold">Cart</span>
             </Link>
           </div>
-          {/* Cart Button
-          <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
-            <Link to="/cart" className="flex items-center space-x-1">
-              <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
-              <span className="text-xs font-bold">Cart</span>
-            </Link>
+          {/* Cart Button */}
+          {/* <div className="h-10 w-1/4  mr-2 mt-3 grid place-content-center rounded-lg hover:text-white bg-slate-200">
+            <label htmlFor=""></label>
           </div> */}
         </div>
+        
       </div>
     </header>
   );
