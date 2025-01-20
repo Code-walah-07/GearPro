@@ -8,8 +8,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header_class() {
-  const location = useLocation();
-
   return (
     <header className=" pb-1 h-18 flex flex-wrap">
       <div className="h-20 flex text-wrap w-full bg-white">
@@ -62,8 +60,8 @@ function Header_class() {
           {/* Cart Button */}
           <div className="h-10 w-1/4 ml-1 mr-2 mt-3 grid place-content-center rounded-lg hover:bg-black hover:text-white">
             <Link to="/CartPage" className="flex items-center space-x-1">
-              <FontAwesomeIcon icon={faCartShopping} className="text-xs" />
-              <span className="text-xs font-bold">Cart</span>
+              <FontAwesomeIcon icon={faCartShopping} className="text-lg" />
+              <span className="text-lg font-bold">Cart</span>
             </Link>
           </div>
           {/* Cart Button */}
@@ -71,7 +69,6 @@ function Header_class() {
             <label htmlFor=""></label>
           </div> */}
         </div>
-        
       </div>
     </header>
   );

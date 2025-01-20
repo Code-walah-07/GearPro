@@ -11,6 +11,10 @@ import Sign_in from "./components/sub_pages/Sign_in";
 import CartPage from "./components/sub_pages/CartPage";
 import BillingPage from "./components/sub_pages/BillingPage";
 import OrderConfirmation from "./components/sub_pages/OrderConfirmation";
+import MenCategoryPage from "./components/MainPages/MenCategoryPage";
+import WomenCategoryPage from "./components/MainPages/WomenCategoryPage";
+import ProductCategoryPage from "./components/MainPages/ProductCategoryPage";
+import BrandsCategoryPage from "./components/MainPages/BrandCategoryPage";
 
 function App() {
   return (
@@ -23,6 +27,11 @@ function App() {
         <Route path="/CartPage" element={<CartPage />} />
         <Route path="/BillingPage" element={<BillingPage />} />
         <Route path="/OrderConfirmation" element={<OrderConfirmation />} />
+        <Route path="/MenCategoryPage" element={<MenCategoryPage />} />
+        <Route path="/WomenCategoryPage" element={<WomenCategoryPage />} />
+        <Route path="/ProductCategoryPage" element={<ProductCategoryPage />} />
+        <Route path="/BrandsCategoryPage" element={<BrandsCategoryPage />} />
+
       </Routes>
     </BrowserRouter>
   );

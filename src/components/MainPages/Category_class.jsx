@@ -6,7 +6,7 @@ function Category_class() {
       <nav className="flex flex-wrap justify-center gap-4">
         {/* Men category */}
         <Link
-          to="/men"
+          to="/MenCategoryPage"
           className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
         >
           <img
@@ -19,7 +19,7 @@ function Category_class() {
 
         {/* Women category */}
         <Link
-          to="/women"
+          to="/WomenCategoryPage"
           className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
         >
           <img
@@ -32,7 +32,7 @@ function Category_class() {
 
         {/* Product category */}
         <Link
-          to="/product"
+          to="/ProductCategoryPage"
           className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
         >
           <img
@@ -45,7 +45,7 @@ function Category_class() {
 
         {/* Brands category */}
         <Link
-          to="/brands"
+          to="/BrandsCategoryPage"
           className="w-1/4 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center hover:opacity-90"
         >
           <img
