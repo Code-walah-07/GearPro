@@ -32,7 +32,7 @@ function Header_class() {
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 py-3 space-y-3 md:space-y-0">
         {/* Top Row: Logo + Right Buttons */}
-        <div className="flex w-full justify-evenly items-center">
+        <div className="flex w-full justify-evenly items-center dark:bg-white">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
