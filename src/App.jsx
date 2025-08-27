@@ -15,6 +15,7 @@ import MenCategoryPage from "./components/MainPages/MenCategoryPage";
 import WomenCategoryPage from "./components/MainPages/WomenCategoryPage";
 import ProductCategoryPage from "./components/MainPages/ProductCategoryPage";
 import BrandsCategoryPage from "./components/MainPages/BrandCategoryPage";
+import Profilepage from "./components/sub_pages/Profilepage";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
         <Route path="/WomenCategoryPage" element={<WomenCategoryPage />} />
         <Route path="/ProductCategoryPage" element={<ProductCategoryPage />} />
         <Route path="/BrandsCategoryPage" element={<BrandsCategoryPage />} />
-
+        <Route path="/Profilepage" element={<Profilepage />} />
       </Routes>
     </BrowserRouter>
   );

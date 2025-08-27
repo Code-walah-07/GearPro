@@ -33,28 +33,29 @@ function Sign_in() {
 
         {/* Header */}
         <div className="text-center mb-4">
+          <h2 className="text-xl text-gray-700 t">Welcome!</h2>
           <h3 className="text-xl text-gray-600">Create your account</h3>
         </div>
         <form action="POST">
         {/* Input Fields */}
         <div className="flex flex-col items-center">
           <input
-            className="mt-1 w-80 h-10 rounded-lg text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-1 w-80 h-10 rounded-xl text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="text" onChange={(e)=>{setName(e.target.value)}}
             placeholder="Enter Your Name"
           />
           <input
-            className="mt-3 w-80 h-10 rounded-lg text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-3 w-80 h-10 rounded-xl text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="email" onChange={(e)=>{setEmail(e.target.value)}}
             placeholder="Enter Your Email"
           />
           <input
-            className="mt-3 w-80 h-10 rounded-lg text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-3 w-80 h-10 rounded-xl text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="text" onChange={(e)=>{setUser(e.target.value)}}
             placeholder="Enter Your Username"
           />
           <input
-            className="mt-3 w-80 h-10 rounded-lg text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="mt-3 w-80 h-10 rounded-xl text-sm px-4 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="password" onChange={(e)=>{setPassword(e.target.value)}}
             placeholder="Enter Your Password"
           />
@@ -69,6 +70,26 @@ function Sign_in() {
             className="w-80 h-10 rounded-2xl bg-slate-500 text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500" onClick={submit}
           />
 
+        </div>
+        <div className="mt-2">
+          <span className="ml-5 text-xs ">---------------------------------- or, login with
+            ----------------------------------
+          </span>
+        </div>
+        {/* other methods for login */}
+        <div className="flex items-center justify-center mt-2">
+          <a href="">
+            <div className="hover:bg-white w-20 h-8 flex justify-center rounded-md">
+              <img className="w-6" src="google.svg" alt="" />
+              <button>Google</button>
+            </div>
+          </a>
+          <a href="">
+            <div className="hover:bg-white w-24 h-8 ml-5 flex justify-center rounded-md">
+              <img className="w-6" src="facebook.svg" alt="" />
+              <button>facebook</button>
+            </div>
+          </a>
         </div>
         </form>
         {/* Already Have an Account */}

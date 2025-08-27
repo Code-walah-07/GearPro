@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",   // <-- add this line
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx,svg}",
@@ -7,18 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-      electricBlue: '#1E90FF',
-      charcoalBlack: '#2E2E2E',
-      limeGreen: '#32CD32',
-      brightOrange: '#FF8C00',
-      coolGray: '#E6E6E6',
-      darkNavy: '#1B1F3B',
+        electricBlue: '#1E90FF',
+        charcoalBlack: '#2E2E2E',
+        limeGreen: '#32CD32',
+        brightOrange: '#FF8C00',
+        coolGray: '#E6E6E6',
+        darkNavy: '#1B1F3B',
+      },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+      },
     },
-    fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      heading: ['Montserrat', 'sans-serif'],
-    },},
   },
   plugins: [],
 }
-
