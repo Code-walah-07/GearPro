@@ -32,11 +32,11 @@ function Header_class() {
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 py-3 space-y-3 md:space-y-0">
         {/* Top Row: Logo + Right Buttons */}
-        <div className="flex w-full justify-evenly items-center dark:bg-white">
+        <div className="flex w-full justify-evenly items-center ">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              className="h-12 rounded-lg hover:scale-105 transition-transform duration-300"
+              className="h-12 rounded-lg hover:scale-105 transition-transform duration-300 dark:bg-white"
               src="/new_logo_2.svg"
               alt="GearPro_Logo"
             />
