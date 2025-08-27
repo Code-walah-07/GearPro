@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 
 function Category_class() {
   return (
-    <div className="h-auto m-2  bg-slate-100 dark:bg-gray-900 rounded-md p-3 transition-colors duration-500">
-    <h2>Categories</h2>
+    <div className="w-full bg-slate-100 dark:bg-black py-6 px-3 transition-colors duration-500">
+      <h2 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-gray-100">
+        Categories
+      </h2>
+
       <nav className="flex flex-wrap justify-center gap-6">
-        
-        {/* Category Item Component */}
         {[
           { to: "/MenCategoryPage", img: "category_pic/men.png", label: "Men" },
           { to: "/WomenCategoryPage", img: "category_pic/women.png", label: "Women" },
@@ -28,10 +29,11 @@ function Category_class() {
               src={category.img}
               alt={category.label}
             />
-            <b className="text-sm mt-2 text-gray-800 dark:text-gray-200">{category.label}</b>
+            <b className="text-sm mt-2 text-gray-800 dark:text-gray-200">
+              {category.label}
+            </b>
           </Link>
         ))}
-
       </nav>
     </div>
   );

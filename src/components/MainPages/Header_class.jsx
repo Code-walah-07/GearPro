@@ -27,7 +27,7 @@ function Header_class() {
   return (
     <header
       className={`sticky top-0 z-50 shadow-md transition-all duration-500 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 md:px-8 py-3 space-y-3 md:space-y-0">
