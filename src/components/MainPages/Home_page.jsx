@@ -22,12 +22,12 @@ export default function Home_page() {
         </section>
 
         {/* Category Section */}
-        <section className="max-w-screen-xl mx-auto px-4">
+        <section className="w-full mx-auto px-4">
           <Category_class />
         </section>
 
         {/* Main Content / Featured Products */}
-        <section className="max-w-screen-xl mx-auto px-4">
+        <section className="w-full mx-auto px-4">
           <Main_content />
         </section>
       </main>

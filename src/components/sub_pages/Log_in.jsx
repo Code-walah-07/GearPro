@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-function Sign_in() {
+function Log_in() {
 
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
@@ -107,4 +107,4 @@ function Sign_in() {
   );
 }
 
-export default Sign_in;
+export default Log_in;

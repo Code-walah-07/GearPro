@@ -2,19 +2,20 @@ import { Link } from "react-router-dom";
 
 function Category_class() {
   return (
-    <div className="w-full bg-slate-100 dark:bg-black py-6 px-3 transition-colors duration-500">
-      <h2 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-gray-100">
+    <div className="w-full bg-slate-100 dark:bg-transparent py-6 px-3 transition-colors duration-500">
+      {/* Updated Heading */}
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100 relative">
         Categories
+        <span className="block w-24 h-1 bg-blue-500 mx-auto mt-2 rounded-full"></span>
       </h2>
 
-      <nav className="flex flex-wrap justify-center gap-6">
+      <nav className="flex flex-wrap justify-center gap-10">
         {[
           { to: "/MenCategoryPage", img: "category_pic/men.png", label: "Men" },
           { to: "/WomenCategoryPage", img: "category_pic/women.png", label: "Women" },
           { to: "/ProductCategoryPage", img: "category_pic/product.png", label: "Product" },
           { to: "/BrandsCategoryPage", img: "category_pic/brands.png", label: "Brands" },
           { to: "/sports", img: "category_pic/sports.png", label: "Sports" },
-          { to: "/ShoesCategoryPage", img: "category_pic/shoes.png", label: "Shoes" },
           { to: "/AccessoriesCategoryPage", img: "category_pic/accessories.png", label: "Accessories" },
           { to: "/KidsCategoryPage", img: "category_pic/kids.png", label: "Kids" },
           { to: "/FitnessCategoryPage", img: "category_pic/fitness.png", label: "Fitness" },
@@ -22,7 +23,7 @@ function Category_class() {
           <Link
             key={i}
             to={category.to}
-            className="w-1/3 sm:w-1/5 md:w-1/6 flex flex-col items-center text-center transform hover:scale-110 transition duration-300 ease-in-out"
+            className="flex flex-col items-center text-center transform hover:scale-110 transition duration-300 ease-in-out"
           >
             <img
               className="h-28 w-auto rounded-lg cursor-pointer shadow-md hover:shadow-xl transition duration-300"
