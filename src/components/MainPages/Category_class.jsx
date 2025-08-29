@@ -13,17 +13,17 @@ function Category_class() {
         {[
           { to: "/MenCategoryPage", img: "category_pic/men.png", label: "Men" },
           { to: "/WomenCategoryPage", img: "category_pic/women.png", label: "Women" },
-          { to: "/ProductCategoryPage", img: "category_pic/product.png", label: "Product" },
+          { to: "/KidsCategoryPage", img: "category_pic/kids.png", label: "Kids" },
+          { to: "/ProductCategoryPage", img: "category_pic/shoes.png", label: "Product" },
           { to: "/BrandsCategoryPage", img: "category_pic/brands.png", label: "Brands" },
           { to: "/sports", img: "category_pic/sports.png", label: "Sports" },
-          { to: "/AccessoriesCategoryPage", img: "category_pic/accessories.png", label: "Accessories" },
-          { to: "/KidsCategoryPage", img: "category_pic/kids.png", label: "Kids" },
+          { to: "/AccessoriesCategoryPage", img: "category_pic/accesories.png", label: "Accessories" },
           { to: "/FitnessCategoryPage", img: "category_pic/fitness.png", label: "Fitness" },
         ].map((category, i) => (
           <Link
             key={i}
             to={category.to}
-            className="flex flex-col items-center text-center transform hover:scale-110 transition duration-300 ease-in-out"
+            className="flex flex-col justify-center items-center text-center transform hover:scale-110 transition duration-300 ease-in-out"
           >
             <img
               className="h-28 w-auto rounded-lg cursor-pointer shadow-md hover:shadow-xl transition duration-300"

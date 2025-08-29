@@ -16,6 +16,14 @@ function Header_class() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // ✅ NEW: state for username
+  const [userName, setUserName] = useState("");
+    useEffect(() => {
+    const storedName = localStorage.getItem("userName");
+    if (storedName) setUserName(storedName);
+  }, []);
+
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -41,6 +49,14 @@ function Header_class() {
               alt="GearPro_Logo"
             />
           </Link>
+          
+          {/* ✅ Show username next to logo (desktop view) */}
+          {userName && (
+            <span className="ml-4 font-semibold text-indigo-600 dark:text-indigo-400">
+              Welcome, {userName} 👋
+            </span>
+          )}
+
 
           {/* Right Side Buttons */}
           <div className="flex items-center space-x-3">
@@ -74,29 +90,10 @@ function Header_class() {
           />
         </div>
 
-        {/* Desktop Navigation
-        <nav className="hidden md:flex flex-1 justify-center space-x-10 font-medium">
-          <Link to="/" className="hover:text-indigo-800 transition-colors duration-300">
-            Home
-          </Link>
-          <Link to="/shop" className="hover:text-indigo-800 transition-colors duration-300">
-            Shop
-          </Link>
-          <Link to="/categories" className="hover:text-indigo-800 transition-colors duration-300">
-            Categories
-          </Link>
-          <Link to="/about" className="hover:text-indigo-800 transition-colors duration-300">
-            About
-          </Link>
-          <Link to="/contact" className="hover:text-indigo-800 transition-colors duration-300">
-            Contact
-          </Link>
-        </nav> */}
-
         {/* Desktop Right Side (Login/Profile/Cart) */}
         <div className="hidden pl-20 md:flex items-center text-md space-x-5">
           <Link
-            to="/Sign_up"
+            to="/Log_in"
             className="px-3 py-2 rounded-lg hover:bg-indigo-800 hover:text-white transition-all duration-300 flex items-center space-x-2"
           >
             <FontAwesomeIcon icon={faRightToBracket} />
@@ -155,6 +152,13 @@ function Header_class() {
           <Link to="/CartPage" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
             Cart
           </Link>
+
+          {/* ✅ NEW: Show username in mobile menu too */}
+          {userName && (
+            <span className="mt-2 font-semibold text-indigo-600 dark:text-indigo-400">
+              Welcome, {userName} 👋
+            </span>
+          )}
         </div>
       )}
     </header>

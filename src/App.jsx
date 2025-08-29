@@ -1,8 +1,7 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
-  BrowserRouter,
 } from "react-router-dom";
 //import "./App.css";
 import Home_page from "./components/MainPages/Home_page";
@@ -22,7 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home_page />} />
-        <Route path="/Home_page" element={<Home_page />} />
+        <Route path="/home" element={<Home_page />} />
         <Route path="/Sign_up" element={<Sign_up />} />
         <Route path="/Log_in" element={<Log_in />} />
         <Route path="/CartPage" element={<CartPage />} />
