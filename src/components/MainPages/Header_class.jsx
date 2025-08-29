@@ -6,6 +6,7 @@ import {
   faUser,
   faCartShopping,
   faRightToBracket,
+  faRightFromBracket,
   faMoon,
   faSun,
   faBars,
@@ -15,14 +16,12 @@ import {
 function Header_class() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // ✅ NEW: state for username
   const [userName, setUserName] = useState("");
-    useEffect(() => {
+
+  useEffect(() => {
     const storedName = localStorage.getItem("userName");
     if (storedName) setUserName(storedName);
   }, []);
-
 
   useEffect(() => {
     if (darkMode) {
@@ -31,6 +30,13 @@ function Header_class() {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
+
+  // ✅ Logout function
+  const handleLogout = () => {
+    localStorage.removeItem("userName");
+    setUserName("");
+    setMenuOpen(false); // close mobile menu on logout
+  };
 
   return (
     <header
@@ -49,7 +55,7 @@ function Header_class() {
               alt="GearPro_Logo"
             />
           </Link>
-          
+
           {/* ✅ Show username next to logo (desktop view) */}
           {userName && (
             <span className="ml-4 font-semibold text-indigo-600 dark:text-indigo-400">
@@ -57,13 +63,12 @@ function Header_class() {
             </span>
           )}
 
-
           {/* Right Side Buttons */}
           <div className="flex items-center space-x-3">
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="px-5 py-2 rounded-lg hover:bg-indigo-800 hover:text-white transition-all duration-300 shadow"
+              className="px-5 py-2 rounded-lg hover:bg-indigo-800 hover:text-white transition-all duration-300 "
             >
               <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
             </button>
@@ -92,13 +97,25 @@ function Header_class() {
 
         {/* Desktop Right Side (Login/Profile/Cart) */}
         <div className="hidden pl-20 md:flex items-center text-md space-x-5">
-          <Link
-            to="/Log_in"
-            className="px-3 py-2 rounded-lg hover:bg-indigo-800 hover:text-white transition-all duration-300 flex items-center space-x-2"
-          >
-            <FontAwesomeIcon icon={faRightToBracket} />
-            <span className="text-sm font-semibold">Login</span>
-          </Link>
+          {!userName ? (
+            // ✅ Show Login if not logged in
+            <Link
+              to="/Log_in"
+              className="px-3 py-2 rounded-lg hover:bg-indigo-800 hover:text-white transition-all duration-300 flex items-center space-x-2"
+            >
+              <FontAwesomeIcon icon={faRightToBracket} />
+              <span className="text-sm font-semibold">Login</span>
+            </Link>
+          ) : (
+            // ✅ Show Logout if logged in
+            <button
+              onClick={handleLogout}
+              className="px-3 py-2 rounded-lg dark:text-white  text-black hover:bg-red-600 hover:text-white nntransition-all duration-300 flex items-center space-x-2"
+            >
+              <FontAwesomeIcon icon={faRightFromBracket} />
+              <span className="text-sm font-semibold">Logout</span>
+            </button>
+          )}
 
           <Link
             to="/Profilepage"
@@ -143,9 +160,21 @@ function Header_class() {
           <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
             Contact
           </Link>
-          <Link to="/Sign_up" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
-            Login
-          </Link>
+
+          {/* ✅ Conditional Login/Logout */}
+          {!userName ? (
+            <Link to="/Sign_up" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+              Login
+            </Link>
+          ) : (
+            <button
+              onClick={handleLogout}
+              className="text-left hover:text-red-800 transition-colors"
+            >
+              Logout
+            </button>
+          )}
+
           <Link to="/Profilepage" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
             Profile
           </Link>
@@ -153,12 +182,7 @@ function Header_class() {
             Cart
           </Link>
 
-          {/* ✅ NEW: Show username in mobile menu too */}
-          {userName && (
-            <span className="mt-2 font-semibold text-indigo-600 dark:text-indigo-400">
-              Welcome, {userName} 👋
-            </span>
-          )}
+          
         </div>
       )}
     </header>
