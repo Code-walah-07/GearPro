@@ -1,8 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import "./App.css";
 import Home_page from "./components/MainPages/Home_page";
 import Sign_up from "./components/sub_pages/Sign_up";
@@ -20,8 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home_page />} />
-        <Route path="/home" element={<Home_page />} />
+        <Route path="/home" index element={<Home_page />} />
         <Route path="/Sign_up" element={<Sign_up />} />
         <Route path="/Log_in" element={<Log_in />} />
         <Route path="/CartPage" element={<CartPage />} />
