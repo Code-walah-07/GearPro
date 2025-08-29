@@ -59,7 +59,7 @@ function Header_class() {
           {/* ✅ Show username next to logo (desktop view) */}
           {userName && (
             <span className="ml-4 font-semibold text-indigo-600 dark:text-indigo-400">
-              Welcome, {userName} 👋
+              Welcome, {userName}
             </span>
           )}
 
@@ -145,25 +145,49 @@ function Header_class() {
             darkMode ? "bg-gray-800 text-white" : "bg-gray-100 text-black"
           }`}
         >
-          <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Home
           </Link>
-          <Link to="/shop" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/shop"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Shop
           </Link>
-          <Link to="/categories" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/categories"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Categories
           </Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/about"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             About
           </Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/contact"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Contact
           </Link>
 
           {/* ✅ Conditional Login/Logout */}
           {!userName ? (
-            <Link to="/Sign_up" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+            <Link
+              to="/Sign_up"
+              onClick={() => setMenuOpen(false)}
+              className="hover:text-indigo-800 transition-colors"
+            >
               Login
             </Link>
           ) : (
@@ -175,14 +199,20 @@ function Header_class() {
             </button>
           )}
 
-          <Link to="/Profilepage" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/Profilepage"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Profile
           </Link>
-          <Link to="/CartPage" onClick={() => setMenuOpen(false)} className="hover:text-indigo-800 transition-colors">
+          <Link
+            to="/CartPage"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-indigo-800 transition-colors"
+          >
             Cart
           </Link>
-
-          
         </div>
       )}
     </header>
