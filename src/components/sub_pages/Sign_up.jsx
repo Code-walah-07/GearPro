@@ -1,129 +1,126 @@
+import axios from "axios";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000",
+});
 
 function Sign_up() {
-  const [email, setemail] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
-
-  const handleLogin = async (e) => {
+  async function submit(e) {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+      const res = await API.post("/api/auth/register", {
+        name,
+        email,
+        user,
+        password,
       });
 
-      const data = await res.json();
-
-      if (res.ok) {
-        alert("Login Successful ✅");
-        // Save token
-        localStorage.setItem("token", data.token);
-        // ✅ Save user name too
-        if (data.user && data.user.name) {
-          localStorage.setItem("userName", data.user.name);
-        }
-
-        navigate("/home");
-      } else {
-        alert(data.message || "Invalid Credentials ❌");
-      }
+      alert(res.data.message || "Account created successfully");
     } catch (err) {
-      console.error("Login Error:", err);
-      alert("Something went wrong ❌");
+      console.error(err.response?.data || err);
+      alert(err.response?.data?.message || "Something went wrong");
+    } finally {
+      setLoading(false);
     }
-  };
+  }
 
   return (
-    <div className="flex flex-col h-screen justify-center items-center bg-gray-100 dark:bg-gray-900 transition-colors">
-      {/* Logo */}
-      <div className="mb-6">
-        <img className="h-20" src="new_logo_2.svg" alt="Logo" />
-      </div>
-
-      {/* Card */}
-      <div className="w-[90%] max-w-md p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-lg">
-        {/* Heading */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-            Login
-          </h2>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">Welcome Back!</p>
+    <div className="flex h-screen justify-center items-center bg-gray-100 dark:bg-gray-900 transition-colors">
+      <div className="w-96 h-auto rounded-2xl bg-white dark:bg-gray-800 shadow-xl p-6">
+        {/* Logo */}
+        <div className="flex justify-center mb-4">
+          <img className="h-16" src="new_logo_2.svg" alt="Logo" />
         </div>
 
-        {/* Inputs */}
-        <form
-          onSubmit={handleLogin}
-          className="flex flex-col items-center mt-6 space-y-3"
-        >
+        {/* Header */}
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
+            Welcome
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Create your account to get started
+          </p>
+        </div>
+
+        <form onSubmit={submit} className="flex flex-col gap-3">
+          {/* Input Fields */}
           <input
-            className="w-full h-11 px-3 rounded-lg text-sm border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="email"
+            className="w-full h-10 rounded-xl text-sm px-4 border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Enter Your Name"
             required
-            placeholder="Enter Your Username"
-            value={email}
-            onChange={(e) => setemail(e.target.value)}
           />
           <input
-            className="w-full h-11 px-3 rounded-lg text-sm border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="password"
+            className="w-full h-10 rounded-xl text-sm px-4 border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter Your Email"
             required
-            placeholder="Enter Your Password"
+          />
+          <input
+            className="w-full h-10 rounded-xl text-sm px-4 border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            placeholder="Enter Your Username"
+            required
+          />
+          <input
+            className="w-full h-10 rounded-xl text-sm px-4 border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter Your Password"
+            required
           />
 
-          {/* Remember + Forgot */}
-          <div className="flex justify-between items-center w-full mt-2 text-xs">
-            <label className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
-              <input className="w-4 h-4" type="checkbox" />
-              <span>Remember Me</span>
-            </label>
-            <a href="#" className="text-blue-600 hover:underline">
-              Forgot Password?
-            </a>
-          </div>
-
-          {/* Login Button */}
+          {/* Register Button */}
           <button
             type="submit"
-            className="w-full h-11 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition mt-4"
+            className="w-full h-11 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition disabled:bg-gray-400"
+            disabled={loading}
           >
-            Login
+            {loading ? "Registering..." : "Register"}
           </button>
         </form>
 
         {/* Divider */}
-        <div className="flex items-center my-5">
-          <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
-          <span className="px-3 text-xs text-gray-500 dark:text-gray-400">
-            or, login with
+        <div className="flex items-center gap-2 my-4">
+          <hr className="flex-1 border-gray-300 dark:border-gray-600" />
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            or login with
           </span>
-          <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+          <hr className="flex-1 border-gray-300 dark:border-gray-600" />
         </div>
 
-        {/* Social Logins */}
-        <div className="flex justify-center space-x-4">
-          <button className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-            <img className="w-5" src="google.svg" alt="Google" />
-            <span className="text-sm dark:text-white">Google</span>
-          </button>
-          <button className="flex items-center space-x-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
-            <img className="w-5" src="facebook.svg" alt="Facebook" />
-            <span className="text-sm dark:text-white">Facebook</span>
+        {/* Social login */}
+        <div className="flex justify-center gap-4">
+          <button className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition">
+            <img className="w-5" src="google.svg" alt="" />
+            <span className="text-sm">Google</span>
           </button>
         </div>
 
-        {/* Register Link */}
-        <div className="text-center mt-5 text-xs text-gray-600 dark:text-gray-400">
-          Not Registered yet?{" "}
-          <Link to="/Log_in" className="text-blue-600 hover:underline">
-            Register
-          </Link>
+        {/* Already have an account */}
+        <div className="text-center mt-4">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Already have an account?{" "}
+            <a href="/Log_in" className="text-blue-600 hover:underline">
+              Login
+            </a>
+          </p>
         </div>
       </div>
     </div>
