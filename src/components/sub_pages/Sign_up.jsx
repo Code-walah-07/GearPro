@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://gearpro-backend.onrender.com",
+  baseURL:
+    import.meta.env.VITE_API_URL || "https://gearpro-backend.onrender.com",
 });
 
 function Sign_up() {
@@ -18,12 +19,15 @@ function Sign_up() {
     setLoading(true);
 
     try {
-      const res = await API.post("/api/auth/register", {
-        name,
-        email,
-        user,
-        password,
-      });
+      const res = await API.post(
+        "https://gearpro-backend.onrender.com/api/auth/register",
+        {
+          name,
+          email,
+          user,
+          password,
+        }
+      );
 
       alert(res.data.message || "Account created successfully");
     } catch (err) {
